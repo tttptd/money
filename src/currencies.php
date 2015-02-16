@@ -120,6 +120,7 @@ return array(
 	"RON" => "Romanian Leu",
 	"RSD" => "Serbian Dinar",
 	"RUB" => "Russian Ruble",
+	"RUR" => "Russian Ruble",
 	"RWF" => "Rwandan Franc",
 	"SAR" => "Saudi Riyal",
 	"SBD" => "Solomon Islands Dollar",
