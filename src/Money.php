@@ -256,7 +256,9 @@ class Money
      */
     public function getHuman($decimals = 2)
     {
-        return number_format($this->getAmount() / 100, $decimals, ',', ' ') . ' '. $this->getCurrency();
+        $currency = (string)$this->getCurrency();
+
+        return number_format($this->getAmount() / 100, $decimals, ',', ' ') . (!empty($currency) ? ' '. $currency : '' );
     }
 
 
