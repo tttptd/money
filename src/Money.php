@@ -246,6 +246,21 @@ class Money
     }
 
 
+    /**
+     * Возвращает "человеческое" представление: 34 105,23 руб
+     * Для удобного визуального тестирования
+     *
+     * @param  integer $decimals Кол-во знаков после запятой
+     *
+     * @return String
+     */
+    public function getHuman($decimals = 2)
+    {
+        return number_format($this->getAmount() / 100, $decimals, ',', ' ') . ' '. $this->getCurrency();
+    }
+
+
+
 
 
     /**
