@@ -429,15 +429,15 @@ class Money
 
 
     /**
-     * Creates units from string
+     * Creates amounts from string
      *
-     * @param string $string
+     * @param string $string Something like "2939.00"
      *
      * @return int
      *
      * @throws InvalidArgumentException If $string cannot be parsed
      */
-    public static function stringToUnits($string)
+    public static function stringToAmount($string)
     {
         $sign = "(?P<sign>[-\+])?";
         $digits = "(?P<digits>\d*)";
