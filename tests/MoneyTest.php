@@ -340,20 +340,20 @@ class MoneyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ::stringToUnits
+     * @covers ::stringToAmount
      * @dataProvider provideStrings
      */
-    public function testStringToUnits($string, $units)
+    public function testStringToAmount($string, $units)
     {
-        $this->assertEquals($units, Money::stringToUnits($string));
+        $this->assertEquals($units, Money::stringToAmount($string));
     }
 
     /**
-     * @covers ::stringToUnits
+     * @covers ::stringToAmount
      * @expectedException InvalidArgumentException
      */
-    public function testCannotConvertStringToUnits()
+    public function testCannotConvertStringToAmount()
     {
-        Money::stringToUnits('THIS_IS_NOT_CONVERTABLE_TO_UNIT');
+        Money::stringToAmount('THIS_IS_NOT_CONVERTABLE_TO_UNIT');
     }
 }
