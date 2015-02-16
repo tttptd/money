@@ -1,5 +1,6 @@
 <?php
 // From http://openexchangerates.org/currencies.json
+// @codeCoverageIgnoreStart
 return array(
 	"AED" => "United Arab Emirates Dirham",
 	"AFN" => "Afghan Afghani",
@@ -9,7 +10,7 @@ return array(
 	"AOA" => "Angolan Kwanza",
 	"ARS" => "Argentine Peso",
 	"AUD" => "Australian Dollar",
-	"AWG" => "Aruban Florin", 
+	"AWG" => "Aruban Florin",
 	"AZN" => "Azerbaijani Manat",
 	"BAM" => "Bosnia-Herzegovina Convertible Mark",
 	"BBD" => "Barbadian Dollar",
@@ -22,7 +23,6 @@ return array(
 	"BOB" => "Bolivian Boliviano",
 	"BRL" => "Brazilian Real",
 	"BSD" => "Bahamian Dollar",
-	"BTC" => "Bitcoin",
 	"BTN" => "Bhutanese Ngultrum",
 	"BWP" => "Botswanan Pula",
 	"BYR" => "Belarusian Ruble",
@@ -120,6 +120,7 @@ return array(
 	"RON" => "Romanian Leu",
 	"RSD" => "Serbian Dinar",
 	"RUB" => "Russian Ruble",
+	"RUR" => "Russian Ruble",
 	"RWF" => "Rwandan Franc",
 	"SAR" => "Saudi Riyal",
 	"SBD" => "Solomon Islands Dollar",
@@ -163,3 +164,4 @@ return array(
 	"ZMK" => "Zambian Kwacha",
 	"ZWL" => "Zimbabwean Dollar",
 );
+// @codeCoverageIgnoreEnd
