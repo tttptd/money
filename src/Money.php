@@ -358,6 +358,7 @@ class Money
 
 
     /**
+     * Конвертирует текущую валюту в $targetCurrency по курсу $conversionRate
      * @param Currency $targetCurrency
      * @param float|int $conversionRate
      * @param int $roundingMode
@@ -373,7 +374,9 @@ class Money
 
 
     /**
-     * Allocate the money according to a list of ratios
+     * Распределить деньги по долям
+     * Usage:
+     *     list($my_cut, $investors_cut) = Money::EUR(5)->allocate(70, 30);
      *
      * @param array $ratios
      *
@@ -401,7 +404,7 @@ class Money
 
 
     /**
-     * Allocate the money among N targets
+     * Распределить деньги поровну на N частей
      *
      * @param int $n
      *
