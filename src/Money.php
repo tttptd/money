@@ -236,6 +236,20 @@ class Money
 
 
     /**
+     * Возвращает значение getAmount() / 100
+     *
+     * @param  mixed $roundingMode [false | Money::ROUND_HALF_DOWN | Money::ROUND_HALF_EVEN | Money::ROUND_HALF_ODD | Money::ROUND_HALF_UP]
+     *                             Смотри в ман по PHP, функция round, для информации о ключах
+     *                             Если false, то без округления
+     * @return int|float
+     */
+    public function getAmountNormal($roundingMode = self::ROUND_HALF_UP)
+    {
+        return ($roundingMode ? round($this->amount / 100, 0, $roundingMode) : $this->amount / 100);
+    }
+
+
+    /**
      * Returns the currency of this object
      *
      * @return Currency
