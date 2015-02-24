@@ -45,7 +45,7 @@ class CurrenciesProperties
 
     private static $currencies = array(
         'RUR' => array(
-            'symbol' => '₷',
+            'symbol' => '', // ₷ временно убрал. Когда шрифты с рублем более-менее распространятся, поставить нужный символ, а не маковский SPESMILO SIGN
             'ru' => array(
                 'short' => 'руб.',
                 'full' => array('рубль', 'рубля', 'рублей'),
@@ -56,7 +56,7 @@ class CurrenciesProperties
             ),
         ),
         'RUB' => array(
-            'symbol' => '₷',
+            'symbol' => '', // ₷ временно убрал. Когда шрифты с рублем более-менее распространятся, поставить нужный символ, а не маковский SPESMILO SIGN
             'ru' => array(
                 'short' => 'руб.',
                 'full' => array('рубль', 'рубля', 'рублей'),
