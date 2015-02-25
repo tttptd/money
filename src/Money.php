@@ -243,9 +243,15 @@ class Money
      *                             Если false, то без округления
      * @return int|float
      */
-    public function getAmountNormal($roundingMode = self::ROUND_HALF_UP)
+    public function getAmountNormal($roundingMode = false) // $roundingMode = self::ROUND_HALF_UP
     {
-        return ($roundingMode ? round($this->amount / 100, 0, $roundingMode) : $this->amount / 100);
+        $result = $this->amount / 100;
+
+        if($roundingMode) {
+            $result = round($result, 0, $roundingMode);
+        }
+
+        return $result;
     }
 
 
@@ -334,13 +340,17 @@ class Money
      *
      * @return Money
      */
-    public function multiply($multiplier, $roundingMode = self::ROUND_HALF_UP)
+    public function multiply($multiplier, $roundingMode = false) // $roundingMode = self::ROUND_HALF_UP
     {
         $this->assertOperand($multiplier);
 
         $this->assertRoundingMode($roundingMode);
 
-        $product = round($this->amount * $multiplier, 0, $roundingMode);
+        $product = $this->amount * $multiplier;
+
+        if($roundingMode) {
+            $product = round($product, 0, $roundingMode);
+        }
 
         $product = $this->castInteger($product);
 
@@ -357,13 +367,17 @@ class Money
      *
      * @return Money
      */
-    public function divide($divisor, $roundingMode = self::ROUND_HALF_UP)
+    public function divide($divisor, $roundingMode = false) // $roundingMode = self::ROUND_HALF_UP
     {
         $this->assertOperand($divisor);
 
         $this->assertRoundingMode($roundingMode);
 
-        $quotient = round($this->amount / $divisor, 0, $roundingMode);
+        $quotient = $this->amount / $divisor;
+
+        if($roundingMode) {
+            $quotient = round($quotient, 0, $roundingMode);
+        }
 
         $quotient = $this->castInteger($quotient);
 
@@ -378,11 +392,18 @@ class Money
      * @param int $roundingMode
      * @return Money
      */
-    public function convert(Currency $targetCurrency, $conversionRate, $roundingMode = Money::ROUND_HALF_UP)
+    public function convert(Currency $targetCurrency, $conversionRate, $roundingMode = false) // $roundingMode = Money::ROUND_HALF_UP
     {
         $this->assertRoundingMode($roundingMode);
-        $amount = round($this->amount * $conversionRate, 0, $roundingMode);
+
+        $amount = $this->amount * $conversionRate;
+
+        if($roundingMode) {
+            $amount = round($amount, 0, $roundingMode);
+        }
+
         $amount = $this->castInteger($amount);
+
         return new Money($amount, $targetCurrency);
     }
 
@@ -584,7 +605,7 @@ class Money
     {
         if(!in_array(
             $roundingMode,
-            array(self::ROUND_HALF_DOWN, self::ROUND_HALF_EVEN, self::ROUND_HALF_ODD, self::ROUND_HALF_UP)
+            array(false, self::ROUND_HALF_DOWN, self::ROUND_HALF_EVEN, self::ROUND_HALF_ODD, self::ROUND_HALF_UP)
         )) {
             throw new InvalidArgumentException(
                 'Rounding mode should be Money::ROUND_HALF_DOWN | ' .

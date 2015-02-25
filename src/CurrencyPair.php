@@ -96,7 +96,7 @@ class CurrencyPair
      *
      * @throws InvalidArgumentException If $money's currency is not equal to base currency
      */
-    public function convert(Money $money, $roundingMode = Money::ROUND_HALF_UP)
+    public function convert(Money $money, $roundingMode = false) // $roundingMode = Money::ROUND_HALF_UP
     {
         if (!$money->getCurrency()->equals($this->baseCurrency)) {
             throw new InvalidArgumentException("The Money has the wrong currency");

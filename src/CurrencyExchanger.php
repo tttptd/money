@@ -124,7 +124,7 @@ class CurrencyExchanger
      * @param  string|Money\Currency    $counterCurrency    [description]
      * @return [type]
      */
-    public static function exchange(Money $base, $counterCurrency, $roundingMode = Money::ROUND_HALF_UP)
+    public static function exchange(Money $base, $counterCurrency, $roundingMode = false) // $roundingMode = Money::ROUND_HALF_UP
     {
         if($counterCurrency instanceof Currency) {
             $counterCurrency = $counterCurrency->getCode();
