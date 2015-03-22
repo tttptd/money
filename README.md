@@ -1,7 +1,19 @@
 Money
 =====
 
-[![Build Status](https://api.travis-ci.org/mathiasverraes/money.png?branch=master)](http://travis-ci.org/mathiasverraes/money)
+Generate Docs with [ApiGen](http://www.apigen.org/)
+--------
+```php
+composer man
+```
+
+Testing
+--------
+```php
+composer test
+```
+
+---
 
 PHP 5.3+ library to make working with money safer, easier, and fun!
 
@@ -37,7 +49,7 @@ Install the library using [composer][1]. Add the following to your `composer.jso
     "require": {
         "mathiasverraes/money": "dev-master"
     },
-    "minimum-stability": "dev"    
+    "minimum-stability": "dev"
 }
 ```
 
