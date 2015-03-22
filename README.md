@@ -3,14 +3,16 @@ Money
 
 Generate Docs with [ApiGen](http://www.apigen.org/)
 --------
-```php
-composer man
+
+```sh
+$ composer man
 ```
 
 Testing
 --------
-```php
-composer test
+
+```sh
+$ composer test
 ```
 
 ---
