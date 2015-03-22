@@ -1,0 +1,17 @@
+# https://searchcode.com/codesearch/view/17052062/
+# http://www.sitepoint.com/generate-documentation-with-apigen/
+main: Laravel
+title: Shop
+source:
+    - src
+destination: man
+exclude:
+    - man
+    - vendor
+    - tests
+
+accessLevels:
+    - public
+    - protected
+
+templateTheme: bootstrap

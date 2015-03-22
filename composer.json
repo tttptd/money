@@ -9,10 +9,16 @@
             "name": "Mathias Verraes",
             "email": "mathias@verraes.net",
             "homepage": "http://verraes.net"
+        },
+        {
+            "name": "Yury Shishkin",
+            "email": "mynsa04@ya.ru",
+            "homepage": "http://yshishkin.com"
         }
     ],
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "apigen/apigen": "~4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*"
@@ -33,8 +39,16 @@
         }
     },
     "suggest": {
-        "TheBigBrainsCompany/TbbcMoneyBundle": "Very complete Symfony2 bundle with support for Twig, Doctrine, Forms, ...", 
+        "TheBigBrainsCompany/TbbcMoneyBundle": "Very complete Symfony2 bundle with support for Twig, Doctrine, Forms, ...",
         "pink-tie/money-bundle": "Pink-Tie's Symfony2 integration with Money library",
         "Sylius/SyliusMoneyBundle": "Sylius' Symfony2 integration with Money library"
+    },
+    "scripts": {
+        "man": [
+            "apigen generate"
+        ],
+        "test": [
+            "phpunit"
+        ]
     }
 }
