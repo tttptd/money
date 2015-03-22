@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Money\Money | Shop</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
+	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Shop</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Money.html" title="Summary of Money"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Money.html">
+							Money						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Money.CurrenciesProperties.html">CurrenciesProperties</a></li>
+				<li><a href="class-Money.Currency.html">Currency</a></li>
+				<li><a href="class-Money.CurrencyExchanger.html">CurrencyExchanger</a></li>
+				<li><a href="class-Money.CurrencyPair.html">CurrencyPair</a></li>
+				<li><a href="class-Money.ISOCurrencies.html">ISOCurrencies</a></li>
+				<li class="active"><a href="class-Money.Money.html">Money</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Money.AvailableCurrencies.html">AvailableCurrencies</a></li>
+				<li><a href="class-Money.UnknownCurrencyException.html">UnknownCurrencyException</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Money</h1>
+
+
+	<div class="description">
+	<p>Money Value Object</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Money.html">Money</a><br>
+		
+
+				<b>Author:</b>
+				Mathias Verraes<br>
+			<b>Located at</b> <a href="source-class-Money.Money.html#19-618" title="Go to source code">Money.php</a>
+		<br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Money.Money.html#46-60" title="Go to source code">__construct</a>( <span>integer <var>$amount</var></span>, <span><code><a href="class-Money.Currency.html">Money\Currency</a></code> <var>$currency</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$amount</var></dt>
+						<dd>Amount, expressed in the smallest units of $currency (eg cents)</dd>
+						<dt><var>$currency</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidArgumentException<br>If amount is not integer
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__callStatic" id="___callStatic">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-Money.Money.html">Money\Money</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___callStatic">#</a>
+			<code><a href="source-class-Money.Money.html#63-78" title="Go to source code">__callStatic</a>( <span>string <var>$method</var></span>, <span>array <var>$arguments</var></span> )</code>
+
+			<div class="description short">
+				<p>Convenience factory method for a Money object</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Convenience factory method for a Money object</p>
+
+<pre><span class="php-var">$fiveDollar</span> = Money::USD(<span class="php-num">500</span>);</pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$method</var></dt>
+						<dd></dd>
+						<dt><var>$arguments</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isSameCurrency" id="_isSameCurrency">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isSameCurrency">#</a>
+			<code><a href="source-class-Money.Money.html#90-100" title="Go to source code">isSameCurrency</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$other</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks whether a Money has the same Currency as this</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks whether a Money has the same Currency as this</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$other</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isZero" id="_isZero">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isZero">#</a>
+			<code><a href="source-class-Money.Money.html#103-111" title="Go to source code">isZero</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if the value represented by this object is zero</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the value represented by this object is zero</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isPositive" id="_isPositive">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isPositive">#</a>
+			<code><a href="source-class-Money.Money.html#114-122" title="Go to source code">isPositive</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if the value represented by this object is positive</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the value represented by this object is positive</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isNegative" id="_isNegative">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isNegative">#</a>
+			<code><a href="source-class-Money.Money.html#125-133" title="Go to source code">isNegative</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if the value represented by this object is negative</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the value represented by this object is negative</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="equals" id="_equals">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_equals">#</a>
+			<code><a href="source-class-Money.Money.html#136-146" title="Go to source code">equals</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$other</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks whether the value represented by this object equals to the other</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks whether the value represented by this object equals to the other</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$other</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="greaterThan" id="_greaterThan">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_greaterThan">#</a>
+			<code><a href="source-class-Money.Money.html#149-159" title="Go to source code">greaterThan</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$other</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks whether the value represented by this object is greater than the other</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks whether the value represented by this object is greater than the other</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$other</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="greaterThanOrEqual" id="_greaterThanOrEqual">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_greaterThanOrEqual">#</a>
+			<code><a href="source-class-Money.Money.html#162-169" title="Go to source code">greaterThanOrEqual</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$other</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$other</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lessThan" id="_lessThan">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lessThan">#</a>
+			<code><a href="source-class-Money.Money.html#172-182" title="Go to source code">lessThan</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$other</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks whether the value represented by this object is less than the other</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks whether the value represented by this object is less than the other</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$other</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lessThanOrEqual" id="_lessThanOrEqual">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lessThanOrEqual">#</a>
+			<code><a href="source-class-Money.Money.html#185-192" title="Go to source code">lessThanOrEqual</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$other</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$other</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compare" id="_compare">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compare">#</a>
+			<code><a href="source-class-Money.Money.html#195-215" title="Go to source code">compare</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$other</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns an integer less than, equal to, or greater than zero
+if the value of this object is considered to be respectively
+less than, equal to, or greater than the other</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an integer less than, equal to, or greater than zero
+if the value of this object is considered to be respectively
+less than, equal to, or greater than the other</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$other</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAmount" id="_getAmount">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAmount">#</a>
+			<code><a href="source-class-Money.Money.html#227-235" title="Go to source code">getAmount</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the value represented by this object</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the value represented by this object</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getAmountNormal" id="_getAmountNormal">
+
+			<td class="attributes"><code>
+				 public 
+				integer|float
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getAmountNormal">#</a>
+			<code><a href="source-class-Money.Money.html#238-255" title="Go to source code">getAmountNormal</a>( <span>mixed <var>$roundingMode</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				<p>Возвращает значение getAmount() / 100</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Возвращает значение getAmount() / 100</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$roundingMode</var></dt>
+						<dd><p>[false | Money::ROUND_HALF_DOWN | Money::ROUND_HALF_EVEN | Money::ROUND_HALF_ODD | Money::ROUND_HALF_UP]
+                            Смотри в ман по PHP, функция round, для информации о ключах
+                            Если false, то без округления</p></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer|float
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getCurrency" id="_getCurrency">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Currency.html">Money\Currency</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getCurrency">#</a>
+			<code><a href="source-class-Money.Money.html#258-266" title="Go to source code">getCurrency</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the currency of this object</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the currency of this object</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Currency.html">Money\Currency</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getHuman" id="_getHuman">
+
+			<td class="attributes"><code>
+				 public 
+				String
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getHuman">#</a>
+			<code><a href="source-class-Money.Money.html#269-282" title="Go to source code">getHuman</a>( <span>integer <var>$decimals</var> = <span class="php-num">2</span></span> )</code>
+
+			<div class="description short">
+				<p>Возвращает "человеческое" представление: 34 105,23 руб
+Для удобного визуального тестирования</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Возвращает "человеческое" представление: 34 105,23 руб
+Для удобного визуального тестирования</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$decimals</var></dt>
+						<dd>Кол-во знаков после запятой</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						String
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="add" id="_add">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Money.html">Money\Money</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_add">#</a>
+			<code><a href="source-class-Money.Money.html#294-311" title="Go to source code">add</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$addend</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns a new Money object that represents
+the sum of this and an other Money object</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a new Money object that represents
+the sum of this and an other Money object</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$addend</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="subtract" id="_subtract">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Money.html">Money\Money</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_subtract">#</a>
+			<code><a href="source-class-Money.Money.html#314-331" title="Go to source code">subtract</a>( <span><code><a href="class-Money.Money.html">Money\Money</a></code> <var>$subtrahend</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns a new Money object that represents
+the difference of this and an other Money object</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a new Money object that represents
+the difference of this and an other Money object</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$subtrahend</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="multiply" id="_multiply">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Money.html">Money\Money</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_multiply">#</a>
+			<code><a href="source-class-Money.Money.html#334-358" title="Go to source code">multiply</a>( <span>numeric <var>$multiplier</var></span>, <span>integer <var>$roundingMode</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns a new Money object that represents
+the multiplied value by the given factor</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a new Money object that represents
+the multiplied value by the given factor</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$multiplier</var></dt>
+						<dd></dd>
+						<dt><var>$roundingMode</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="divide" id="_divide">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Money.html">Money\Money</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_divide">#</a>
+			<code><a href="source-class-Money.Money.html#361-385" title="Go to source code">divide</a>( <span>numeric <var>$divisor</var></span>, <span>integer <var>$roundingMode</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns a new Money object that represents
+the divided value by the given factor</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a new Money object that represents
+the divided value by the given factor</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$divisor</var></dt>
+						<dd></dd>
+						<dt><var>$roundingMode</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="convert" id="_convert">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Money.html">Money\Money</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_convert">#</a>
+			<code><a href="source-class-Money.Money.html#388-408" title="Go to source code">convert</a>( <span><code><a href="class-Money.Currency.html">Money\Currency</a></code> <var>$targetCurrency</var></span>, <span>float|integer <var>$conversionRate</var></span>, <span>integer <var>$roundingMode</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				<p>Конвертирует текущую валюту в $targetCurrency по курсу $conversionRate</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Конвертирует текущую валюту в $targetCurrency по курсу $conversionRate</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$targetCurrency</var></dt>
+						<dd></dd>
+						<dt><var>$conversionRate</var></dt>
+						<dd></dd>
+						<dt><var>$roundingMode</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="allocate" id="_allocate">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Money.html">Money\Money</a>[]</code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_allocate">#</a>
+			<code><a href="source-class-Money.Money.html#411-438" title="Go to source code">allocate</a>( <span>array <var>$ratios</var></span> )</code>
+
+			<div class="description short">
+				<p>Распределить деньги по долям
+Usage:
+    list($my_cut, $investors_cut) = Money::EUR(5)->allocate(70, 30);</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Распределить деньги по долям
+Usage: list($my_cut, $investors_cut) = Money::EUR(5)->allocate(70, 30);</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$ratios</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a>[]</code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="allocateTo" id="_allocateTo">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Money.Money.html">Money\Money</a>[]</code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_allocateTo">#</a>
+			<code><a href="source-class-Money.Money.html#441-468" title="Go to source code">allocateTo</a>( <span>integer <var>$n</var></span> )</code>
+
+			<div class="description short">
+				<p>Распределить деньги поровну на N частей</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Распределить деньги поровну на N частей</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$n</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Money.Money.html">Money\Money</a>[]</code>
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidArgumentException<br>If number of targets is not an integer
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stringToAmount" id="_stringToAmount">
+
+			<td class="attributes"><code>
+				 public static
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stringToAmount">#</a>
+			<code><a href="source-class-Money.Money.html#471-498" title="Go to source code">stringToAmount</a>( <span>string <var>$string</var></span> )</code>
+
+			<div class="description short">
+				<p>Creates amounts from string</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Creates amounts from string</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$string</var></dt>
+						<dd>Something like "2939.00"</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidArgumentException<br>If $string cannot be parsed
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+		<table class="summary table table-bordered table-striped constants" id="constants">
+		<tr data-order="ROUND_HALF_UP" id="ROUND_HALF_UP">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name">
+				<code>
+					<a href="source-class-Money.Money.html#26" title="Go to source code"><b>ROUND_HALF_UP</b></a>
+				</code>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#ROUND_HALF_UP" class="anchor">#</a>
+					<code>PHP_ROUND_HALF_UP</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="ROUND_HALF_DOWN" id="ROUND_HALF_DOWN">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name">
+				<code>
+					<a href="source-class-Money.Money.html#27" title="Go to source code"><b>ROUND_HALF_DOWN</b></a>
+				</code>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#ROUND_HALF_DOWN" class="anchor">#</a>
+					<code>PHP_ROUND_HALF_DOWN</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="ROUND_HALF_EVEN" id="ROUND_HALF_EVEN">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name">
+				<code>
+					<a href="source-class-Money.Money.html#28" title="Go to source code"><b>ROUND_HALF_EVEN</b></a>
+				</code>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#ROUND_HALF_EVEN" class="anchor">#</a>
+					<code>PHP_ROUND_HALF_EVEN</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="ROUND_HALF_ODD" id="ROUND_HALF_ODD">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name">
+				<code>
+					<a href="source-class-Money.Money.html#29" title="Go to source code"><b>ROUND_HALF_ODD</b></a>
+				</code>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#ROUND_HALF_ODD" class="anchor">#</a>
+					<code>PHP_ROUND_HALF_ODD</code>
+				</div>
+			</td>
+		</tr>
+		</table>
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Shop API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
