@@ -1,13 +1,5 @@
 <?php
 
-/**
- *
- * @author Yury Shishkin
- * 2015
- * http://github.com/tttptd/money
- *
- */
-
 use Money\Currency;
 
 namespace Money;
@@ -15,10 +7,9 @@ namespace Money;
 /**
  * Свойства валют
  *
- */
-
-/**
- * Обменник валют
+ * @author Yury Shishkin
+ * @see http://github.com/tttptd/money
+ *
  */
 class CurrenciesProperties
 {
@@ -108,7 +99,7 @@ class CurrenciesProperties
      * @param  Currency $currency [description]
      * @param  string   $property [description]
      * @param  string   $lang     [description]
-     * @return [type]             [description]
+     * @return string
      */
     public static function getProperty(Currency $currency, $property, $lang = 'ru')
     {

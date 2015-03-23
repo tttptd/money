@@ -1,51 +1,42 @@
 <?php
 
-/**
- *
- * @author Yury Shishkin
- * 2015
- * http://github.com/tttptd/money
- *
- */
-
-
 namespace Money;
 
-/**
- * Обменник валют
- *
- * Usage:
- *
-    $currencyExchanger = CurrencyExchanger::getInstance();
-
-    // Можно в цикле насыщать обменник парами,
-    // чтобы без проблем обменивать валюты туда-сюда
-
-    $baseCurrency = new Currency('USD');
-    $counterCurrency = new Currency('RUR');
-    $ratio = floatval(62.6632);
-
-    // Прямая пара
-    $pair = new CurrencyPair($baseCurrency, $counterCurrency, $ratio);
-    $currencyExchanger->addPair($pair);
-
-    // Обратная пара
-    $reverseRatio = 1 / $ratio;
-    $reversePair = new CurrencyPair($counterCurrency, $baseCurrency, $reverseRatio);
-    $currencyExchanger->addPair($reversePair);
-
-
-    // Обмен
-    $price = Money::RUR(245435);
-
-    $priceResultUsd = $currencyExchanger->exchange($price, 'USD');
-    $priceResultRur = $currencyExchanger->exchange($price, 'RUR');
- *
- */
 use Money\CurrencyPair;
 
 /**
  * Обменник валют
+ *
+ * @example
+ * <code>
+ * $currencyExchanger = CurrencyExchanger::getInstance();
+ *
+ * // Можно в цикле насыщать обменник парами,
+ * // чтобы без проблем обменивать валюты туда-сюда
+ *
+ * $baseCurrency = new Currency('USD');
+ * $counterCurrency = new Currency('RUR');
+ * $ratio = floatval(62.6632);
+ *
+ * // Прямая пара
+ * $pair = new CurrencyPair($baseCurrency, $counterCurrency, $ratio);
+ * $currencyExchanger->addPair($pair);
+ *
+ * // Обратная пара
+ * $reverseRatio = 1 / $ratio;
+ * $reversePair = new CurrencyPair($counterCurrency, $baseCurrency, $reverseRatio);
+ * $currencyExchanger->addPair($reversePair);
+ *
+ *
+ * // Обмен
+ * $price = Money::RUR(245435);
+ *
+ * $priceResultUsd = $currencyExchanger->exchange($price, 'USD');
+ * $priceResultRur = $currencyExchanger->exchange($price, 'RUR');
+ * </code>
+ * @author Yury Shishkin
+ * @see http://github.com/tttptd/money
+ *
  */
 class CurrencyExchanger
 {
@@ -80,6 +71,7 @@ class CurrencyExchanger
     /**
      * Добавляет пару в обменник
      * @param CurrencyPair $pair [description]
+     * @return  self
      */
     public static function addPair(CurrencyPair $pair)
     {
@@ -90,7 +82,7 @@ class CurrencyExchanger
 
 
     /**
-     * [getPairs description]
+     * Возвращает все пары
      * @return array
      */
     public static function getPairs()
@@ -119,10 +111,10 @@ class CurrencyExchanger
 
 
     /**
-     * [exchange description]
-     * @param  Money\Money              $baseCurrencyCode   [description]
-     * @param  string|Money\Currency    $counterCurrency    [description]
-     * @return [type]
+     * Обменивает валюту $base на $counterCurrency
+     * @param  Money              $base               [description]
+     * @param  string|Currency    $counterCurrency    [description]
+     * @return Money
      */
     public static function exchange(Money $base, $counterCurrency, $roundingMode = false) // $roundingMode = Money::ROUND_HALF_UP
     {
@@ -142,9 +134,8 @@ class CurrencyExchanger
             return $base;
         }
         else {
-            return self::getPair($base->getCurrency()->getCode(),
-                                 $counterCurrency)
-                                    ->convert($base, $roundingMode);
+            return self::getPair($base->getCurrency()->getCode(), $counterCurrency)
+                                                            ->convert($base, $roundingMode);
         }
 
     }
