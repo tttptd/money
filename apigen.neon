@@ -1,10 +1,10 @@
 # https://searchcode.com/codesearch/view/17052062/
 # http://www.sitepoint.com/generate-documentation-with-apigen/
 main: Laravel
-title: Shop
+title: Money
 source:
     - src
-destination: man
+destination: man/man
 exclude:
     - man
     - vendor
@@ -12,6 +12,7 @@ exclude:
 
 accessLevels:
     - public
-    - protected
+#    - protected
+#    - private
 
 templateTheme: bootstrap
