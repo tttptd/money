@@ -4,7 +4,7 @@ main: Laravel
 title: Money
 source:
     - src
-destination: man/man
+destination: ../money-man/man
 exclude:
     - man
     - vendor
